@@ -20,7 +20,7 @@ import TodoFooter from './components/TodoFooter.vue'
 export default {
   components:{
     'TodoHeader':TodoHeader,
-    'TodoInput':TodoInput,
+    'TodoInput':TodoInput, 
     'TodoList':TodoList,
     'TodoFooter':TodoFooter,
   }
