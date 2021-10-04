@@ -1,7 +1,6 @@
 <template>
   <div class="inputBox shadow">
       <input type="text" v-model="newTodoItem" v-on:keyup.enter="addTodo">
-      <!-- <button>add</button> -->
       <span class="addContainer" v-on:click="addTodo">
         <i class="fas fa-plus addBtn"></i>
         <i class="fas fa-plus"></i>
@@ -19,8 +18,7 @@ export default {
   methods: {
     addTodo: function(){
       if (this.newTodoItem !==''){
-        var obj= {completed: false, item: this.newTodoItem};
-        localStorage.setItem(this.newTodoItem, JSON.stringify(obj));
+        this.$emit('addTodoItem', this.newTodoItem)
         this.clearInput();
       }
     },
